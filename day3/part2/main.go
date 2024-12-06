@@ -10,16 +10,12 @@ import (
 
 func parseProcedures(values []string, add *bool) [][]int {
 	r := [][]int{}
-	doCount := 0
-	dontCount := 0
 	for _, v := range values {
 		if v == "don't()" {
 			*add = false
-			dontCount++
 			continue
 		} else if v == "do()" {
 			*add = true
-			doCount++
 			continue
 		}
 
